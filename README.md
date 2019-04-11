@@ -1,4 +1,4 @@
-# shop-mall
+# chat-shop-mall
 
 ## Project setup
 ```
