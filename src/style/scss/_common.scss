@@ -1,0 +1,70 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  background-color: $background-color;
+  color: $text-color;
+  // font-size: $font-size-base;
+  // font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+}
+
+// 将Chrome 和 Safari 自动填充淡黄色的背景色变成白色
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+}
+
+// 去除Safari小钥匙
+input::-webkit-credentials-auto-fill-button {
+  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute; /* 避免占用 input 元素额外的 padding，正常情况下存在 display: none!; 就可以了 */
+  right: 0;
+}
+
+clearfix {
+  display: inline-block;
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  * html & { height: 1px }
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    text-decoration: none;
+    list-style: none;
+  }
+}
+@keyframes ani-demo-spin {
+  from { transform: rotate(0deg);}
+  50%  { transform: rotate(180deg);}
+  to   { transform: rotate(360deg);}
+}
+
+.spin-icon-load {
+  animation: ani-demo-spin 1s linear infinite;
+}
