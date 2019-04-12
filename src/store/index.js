@@ -4,6 +4,7 @@ import * as Actions from './actions'
 import * as Getters from './getters'
 import ShoppingMall from './modules/shoppingMall'
 import Home from './modules/home'
+import Account from './modules/account'
 
 Vue.use(Vuex)
 
@@ -13,5 +14,6 @@ export default new Vuex.Store({
   modules: {
     Home,
     ShoppingMall,
+    Account,
   },
 })

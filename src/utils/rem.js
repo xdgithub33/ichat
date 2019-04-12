@@ -31,5 +31,5 @@ export default (win.flex = (normal, baseFontSize, fontscale) => {
     'content',
     `width=device-width,user-scalable=no,initial-scale=${scale},maximum-scale=${scale},minimum-scale=${scale}`,
   )
-  doc.documentElement.style.fontSize = normal ? '50px' : `${(_baseFontSize / 2) * dpr * _fontscale}px`
+  doc.documentElement.style.fontSize = normal ? '50px' : `${_baseFontSize * dpr * _fontscale}px`
 })

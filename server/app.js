@@ -43,9 +43,9 @@ app.use(
 )
 app.use(cookieParser())
 
-app.use('/users', usersRouter)
-app.use('/goods', goodsRouter)
-app.use('/', indexRouter)
+app.use('/api/users', usersRouter)
+app.use('/api/goods', goodsRouter)
+app.use('/api/', indexRouter)
 
 let server = app.listen(3000, function() {
   console.log('login success hahaha...')

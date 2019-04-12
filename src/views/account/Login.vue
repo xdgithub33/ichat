@@ -37,8 +37,8 @@ export default {
       if (!this.username || !this.password) {
         return
       }
-      this.$axios
-        .post('/users/login', {
+      this.$store
+        .dispatch('login', {
           username: this.username,
           password: md5(this.password),
         })

@@ -3,7 +3,7 @@ import axios from 'axios'
 const axiosAjax = (url, method, options) => {
   const defaultOptions = {
     method: 'Get',
-    baseURl: 'http://localhost:8081/',
+    baseURL: '/api',
     timeout: 5000,
     withCredentials: false,
     headers: {
